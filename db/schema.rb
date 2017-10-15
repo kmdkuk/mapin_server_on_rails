@@ -43,11 +43,4 @@ ActiveRecord::Schema.define(version: 20171015065528) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "uploaded_files", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "shop_id"
-    t.string   "file_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
 end
