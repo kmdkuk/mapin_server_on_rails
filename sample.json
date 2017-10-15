@@ -1,0 +1,197 @@
+{
+    "status":"200",
+    "companies":[
+        {
+            "info":{
+                "id":"1",
+                "name":"7&iホールディングス"
+            },
+            "shops":[
+                {
+                    "info":{
+                        "id":"1",
+                        "name":"イトーヨーカドー大井町店",
+                        "image":"https://i.imgur.com/ihcWOPZ.png",
+                        "postal_code":"140-0014",
+                        "address":"東京都品川区大井１丁目３−６",
+                        "tel":"03-3777-6611",
+                        "hours_begin":"10:00:00",
+                        "hours_end":"22:00:00",
+                        "category":"スーパーマーケット",
+                        "homepage":"http://www.itoyokado.co.jp/"
+                    },
+                    "files":[
+                        {
+                            "id":"1",
+                            "name":"ダミー.pdf",
+                            "url":"https://drive.google.com/file/d/0B5PMr_DG7mrec2dSOVV6clZtdGM/view?usp=sharing",
+                            "created_at":"2017-10-06 16:45:00",
+                            "updated_at":"2017-10-06 16:45:00",
+                            "file_type":"pdf"
+                        },
+                        {
+                            "id":"2",
+                            "name":"得の一チラシ.jpg",
+                            "url":"https://drive.google.com/open?id=0B5PMr_DG7mreV0JNT3VyS0NUcWM",
+                            "created_at":"2017-10-06 16:45:00",
+                            "updated_at":"2017-10-06 16:45:00",
+                            "file_type":"jpg"
+                        },
+                        {
+                            "id":"3",
+                            "name":"AP3.ppt",
+                            "url":"https://drive.google.com/file/d/0B_TYMLnAFlZTT0R6OGhjSVU5bjA/view?usp=sharing",
+                            "created_at":"2017-10-06 16:45:00",
+                            "updated_at":"2017-10-06 16:45:00",
+                            "file_type":"ppt"
+                        },
+                        {
+                            "id":"4",
+                            "name":"bmp-sample.bmp",
+                            "url":"https://drive.google.com/file/d/0B_TYMLnAFlZTS3dhc3RzUDJRZnM/view?usp=sharing",
+                            "created_at":"2017-10-06 16:45:00",
+                            "updated_at":"2017-10-06 16:45:00",
+                            "file_type":"bmp"
+                        },
+                        {
+                            "id":"5",
+                            "name":"学習フィードバックテンプレ.doc",
+                            "url":"https://drive.google.com/file/d/0B_TYMLnAFlZTb2Q4ZVA2dmkyclk/view?usp=sharing",
+                            "created_at":"2017-10-06 16:45:00",
+                            "updated_at":"2017-10-06 16:45:00",
+                            "file_type":"doc"
+                        },
+                        {
+                            "id":"6",
+                            "name":"text-sample.text",
+                            "url":"https://drive.google.com/file/d/0B_TYMLnAFlZTaXpfRHBxb19DZ1U/view?usp=sharing",
+                            "created_at":"2017-10-06 16:45:00",
+                            "updated_at":"2017-10-06 16:45:00",
+                            "file_type":"text"
+                        },
+                        {
+                            "id":"7",
+                            "name":"まっぴん プロダクトバックログ.xls",
+                            "url":"https://drive.google.com/file/d/0B_TYMLnAFlZTTzNUQVB4M1MwSGM/view?usp=sharing",
+                            "created_at":"2017-10-06 16:45:00",
+                            "updated_at":"2017-10-06 16:45:00",
+                            "file_type":"xls"
+                        },
+                        {
+                            "id":"8",
+                            "name":"test.c",
+                            "url":"https://drive.google.com/file/d/0B_TYMLnAFlZTNGQ2R3dVRmhIMk0/view?usp=sharing",
+                            "created_at":"2017-10-06 16:45:00",
+                            "updated_at":"2017-10-06 16:45:00",
+                            "file_type":"c"
+                        },
+                        {
+                            "id":"9",
+                            "name":"sample.mp4",
+                            "url":"https://drive.google.com/file/d/0B_TYMLnAFlZTUjAza2VqSzZ4cm8/view?usp=sharing",
+                            "created_at":"2017-10-06 16:45:00",
+                            "updated_at":"2017-10-06 16:45:00",
+                            "file_type":"mp4"
+                        },
+                        {
+                            "id":"10",
+                            "name":"README.md",
+                            "url":"https://drive.google.com/file/d/0B_TYMLnAFlZTVm1IdjByMUhLVDQ/view?usp=sharing",
+                            "created_at":"2017-10-06 16:45:00",
+                            "updated_at":"2017-10-06 16:45:00",
+                            "file_type":"md"
+                        }
+                    ]
+                },
+                {
+                    "info":{
+                        "id":"2",
+                        "name":"セブン-イレブン大井店",
+                        "image":"https://i.imgur.com/Rpphzc4.png",
+                        "postal_code":"東京都品川区 大井５－２－１１",
+                        "address":"140-0014",
+                        "tel":"03-3771-0216",
+                        "hours_begin":"00:00:00",
+                        "hours_end":"23:59:59",
+                        "category":"コンビニ",
+                        "homepage":"http://www.sej.co.jp/"
+                    },
+                    "files":[
+                        {
+                            "id":"1",
+                            "name":"png-sample.png",
+                            "url":"https://drive.google.com/file/d/0B_TYMLnAFlZTQnM4OUN0RkIwUGs/view?usp=sharing",
+                            "created_at":"2017-10-11 16:45:00",
+                            "updated_at":"2017-10-12 17:05:00",
+                            "file_type":"png"
+                        },
+                        {
+                            "id":"2",
+                            "name":"おでん広告.jpg",
+                            "url":"https://drive.google.com/open?id=0B5PMr_DG7mreN240ZnVHYXpZdnM",
+                            "created_at":"2017-10-06 16:45:00",
+                            "updated_at":"2017-10-06 16:45:00",
+                            "file_type":"jpg"
+                        },
+                        {
+                            "id":"3",
+                            "name":"gif-sample.gif",
+                            "url":"https://drive.google.com/file/d/0B_TYMLnAFlZTQXlxdGozdjhOaFU/view?usp=sharing",
+                            "created_at":"2017-10-10 16:45:00",
+                            "updated_at":"2017-10-11 17:05:00",
+                            "file_type":"gif"
+                        },
+                        {
+                            "id":"4",
+                            "name":"AL-アイディア提案シート-テンプレ.xlsx",
+                            "url":"https://drive.google.com/file/d/0B_TYMLnAFlZTRWtwYzgzVWNYdzg/view?usp=sharing",
+                            "created_at":"2017-10-11 16:45:00",
+                            "updated_at":"2017-10-12 17:05:00",
+                            "file_type":"xlsx"
+                        },
+                        {
+                            "id":"5",
+                            "name":"AP1.pptx",
+                            "url":"https://drive.google.com/file/d/0B_TYMLnAFlZTaGR1bkRUNzRvUmc/view?usp=sharing",
+                            "created_at":"2017-10-11 16:45:00",
+                            "updated_at":"2017-10-12 17:05:00",
+                            "file_type":"pptx"
+                        },
+                        {
+                            "id":"6",
+                            "name":"MI-議事録-00-松山-0525-テンプレ案-ver2.1.docx",
+                            "url":"https://drive.google.com/file/d/0B_TYMLnAFlZTVGZEYjU1WWFRMjg/view?usp=sharing",
+                            "created_at":"2017-10-11 16:45:00",
+                            "updated_at":"2017-10-12 17:05:00",
+                            "file_type":"docx"
+                        },
+                        {
+                            "id":"7",
+                            "name":"1-画像検索.pages",
+                            "url":"https://drive.google.com/file/d/0B_TYMLnAFlZTV19zNGtzbmE1TlE/view?usp=sharing",
+                            "created_at":"2017-10-11 16:45:00",
+                            "updated_at":"2017-10-12 17:05:00",
+                            "file_type":"pages"
+                        },
+                        {
+                            "id":"8",
+                            "name":"スイーツカテゴリ数.numbers",
+                            "url":"https://drive.google.com/file/d/0B_TYMLnAFlZTYXhTeWxTeHNfRG8/view?usp=sharing",
+                            "created_at":"2017-10-11 16:45:00",
+                            "updated_at":"2017-10-12 17:05:00",
+                            "file_type":"numbers"
+                        },
+                        {
+                            "id":"9",
+                            "name":"mapin.key",
+                            "url":"https://drive.google.com/file/d/0B_TYMLnAFlZTSXNGT1hVbUVTXzQ/view?usp=sharing",
+                            "created_at":"2017-10-11 16:45:00",
+                            "updated_at":"2017-10-12 17:05:00",
+                            "file_type":"key"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
