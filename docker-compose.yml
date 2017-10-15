@@ -4,23 +4,7 @@ services:
     build: .
     environment:
       RAILS_ENV: development
-      DATABASE_URL: mysql2://root:pass@mysql:3306
-      MYSQL_ROOT_URL: 'pass'
-    command: bundle exec rails s -p 3000 -b '0.0.0.0'
     ports:
       - '3000:3000'
     volumes:
       - .:/usr/src/mapin_server
-    links:
-      - mysql
-  mysql:
-    image: mysql:5.7.10
-    environment:
-      MYSQL_ROOT_PASSWORD: 'pass'
-    ports:
-      - '3306:3306'
-    volumes:
-      - mysql-data:/var/lib/mysql
-volumes:
-  mysql-data:
-    driver: local
