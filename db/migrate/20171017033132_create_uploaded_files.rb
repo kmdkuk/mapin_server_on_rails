@@ -3,7 +3,8 @@ class CreateUploadedFiles < ActiveRecord::Migration[5.0]
     create_table :uploaded_files do |t|
       t.string :name
       t.string :url
-      t.string :type
+      t.string :file_type
+      t.integer :shop_id
 
       t.timestamps
     end

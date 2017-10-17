@@ -3,9 +3,11 @@
 one:
   name: MyString
   url: MyString
-  type: 
+  file_type: MyString
+  shop_id: 1
 
 two:
   name: MyString
   url: MyString
-  type: 
+  file_type: MyString
+  shop_id: 1

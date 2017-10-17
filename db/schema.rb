@@ -10,37 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171015065528) do
+ActiveRecord::Schema.define(version: 20171017033132) do
 
-  create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "companies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "companies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name"
-    t.string   "name_kana"
-    t.string   "location"
-    t.string   "location_kana"
-    t.string   "responsible_person"
-    t.string   "responsible_person_kana"
-    t.string   "email"
-    t.string   "phonenumber"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-  end
-
   create_table "shops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "image"
+    t.string   "name"
+    t.string   "image_url"
+    t.string   "postal_code"
     t.string   "address"
+    t.string   "tel"
     t.string   "hours_begin"
     t.string   "hours_end"
-    t.string   "tel"
-    t.string   "postal_code"
+    t.integer  "category_id"
     t.string   "homepage"
+    t.integer  "company_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "uploaded_files", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.string   "url"
+    t.string   "file_type"
+    t.integer  "shop_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

@@ -2,20 +2,6 @@
 
 one:
   name: MyString
-  name_kana: MyString
-  location: MyString
-  location_kana: MyString
-  responsible_person: MyString
-  responsible_person_kana: MyString
-  email: MyString
-  phonenumber: MyString
 
 two:
   name: MyString
-  name_kana: MyString
-  location: MyString
-  location_kana: MyString
-  responsible_person: MyString
-  responsible_person_kana: MyString
-  email: MyString
-  phonenumber: MyString
