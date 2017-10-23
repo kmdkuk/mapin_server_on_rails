@@ -21,7 +21,9 @@ shop = company.shops.create(
   hours_begin: "10:00:00",
   hours_end: "22:00:00",
   category_id: market.id,
-  homepage: "http://www.itoyokado.co.jp/"
+  homepage: "http://www.itoyokado.co.jp/",
+  longitude: 35.6072075,
+  latitude: 139.7339655
 )
 
 shop.uploaded_files.create(

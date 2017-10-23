@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171017033241) do
+ActiveRecord::Schema.define(version: 20171023043830) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -35,8 +35,10 @@ ActiveRecord::Schema.define(version: 20171017033241) do
     t.integer  "category_id"
     t.string   "homepage"
     t.integer  "company_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.float    "longitude",   limit: 53
+    t.float    "latitude",    limit: 53
   end
 
   create_table "uploaded_files", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
