@@ -6,7 +6,7 @@ class CompanyController < ApplicationController
   def show
     @company = Company.find(params[:id])
     # company/<company_id>/shop で表示するべきかも
-    @shops = @company.shops
+    # @shops = @company.shops
   end
 
   def create

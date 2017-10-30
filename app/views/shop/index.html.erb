@@ -1,3 +1,5 @@
+
+<%= @company.name %>のショップ一覧
 <table>
   <tr>
     <th>id</th>
@@ -6,13 +8,15 @@
     <th>住所</th>
     <th>電話番号</th>
   </tr>
-  <% @shops.each do |shop| %>
-    <tr>
-      <td><%= shop.id %></td>
-      <td><%= shop.name %></td>
-      <td><%= shop.postal_code %></td>
-      <td><%= shop.address %></td>
-      <td><%= shop.tel %></td>
-    </tr>
+  <% unless @shops.nil? %>
+    <% @shops.each do |shop|%>
+      <tr>
+        <td><%= shop.id %></td>
+        <td><%= shop.name%></td>
+        <td><%= shop.postal_code%></td>
+        <td><%= shop.address%></td>
+        <td><%= shop.tel%></td>
+      </tr>
+    <% end %>
   <% end %>
 </table>
