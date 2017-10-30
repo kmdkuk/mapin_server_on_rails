@@ -1,0 +1,33 @@
+<%= form_for([@shop.company, @shop]) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control' %>
+
+  <%= f.label :image_url %>
+  <%= f.text_field :image_url, class: 'form-control' %>
+
+  <%= f.label :postal_code %>
+  <%= f.text_field :postal_code, class: 'form-control' %>
+
+  <%= f.label :address %>
+  <%= f.text_field :address, class: 'form-control' %>
+
+  <%= f.label :tel %>
+  <%= f.text_field :tel, class: 'form-control' %>
+
+  <%= f.label :hours_begin %>
+  <%= f.text_field :hours_begin, class: 'form-control' %>
+
+  <%= f.label :hours_end %>
+  <%= f.text_field :hours_end, class: 'form-control' %>
+
+  <%= f.label :homepage %>
+  <%= f.text_field :homepage, class: 'form-control' %>
+
+  <%= f.label :longitude %>
+  <%= f.text_field :longitude, class: 'form-control' %>
+
+  <%= f.label :latitude %>
+  <%= f.text_field :latitude, class: 'form-control' %>
+
+  <%= f.submit "Add", class: "btn btn-primary" %>
+<% end %>

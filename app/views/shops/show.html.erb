@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>id</th>
+    <th>名前</th>
+    <th>郵便番号</th>
+    <th>住所</th>
+    <th>電話番号</th>
+  </tr>
+  <% unless @shop.nil? %>
+    <%= render 'show_data', shop: @shop %>
+  <% end %>
+</table>
