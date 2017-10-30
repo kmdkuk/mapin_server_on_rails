@@ -10,9 +10,18 @@ class CompaniesController < ApplicationController
   end
 
   def create
+    @company = Company.new(company_params)
+    if @company.save
+      flash[:success] = "Company Add!"
+      redirect_to @company
+    else
+      flash[:danger] = "Company Add fail...."
+      render 'new'
+    end
   end
 
   def new
+    @company = Company.new
   end
 
   def edit
@@ -20,4 +29,9 @@ class CompaniesController < ApplicationController
 
   def update
   end
+
+  private
+    def company_params
+      params.require(:company).permit(:name)
+    end
 end
