@@ -15,10 +15,11 @@ class ShopsController < ApplicationController
   end
 
   def create
+    @company = Company.find(params[:company_id])
     @shop = @company.shops.build(shop_params)
     if @shop.save
       flash[:success] = "Shop add!"
-      redirect_to @shop
+      redirect_to [@company, @shop]
     else
       flash[:danger] = "Company add fail..."
       render 'new'
