@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>id</th>
+    <th>ファイル名</th>
+    <th>ファイルタイプ</th>
+  </tr>
+
+  <tr>
+    <% @files.each do |file| %>
+      <%= render 'show_data', file: file %>
+    <% end %>
+  </tr>
+
+</table>
