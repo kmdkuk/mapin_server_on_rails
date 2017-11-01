@@ -8,19 +8,19 @@ class FilesController < ApplicationController
   def show
     @company = Company.find(params[:company_id])
     @shop = @company.shops.find(params[:shop_id])
-    @file = @shops.files.find(params[:id])
+    @file = @shops.uploaded_files.find(params[:id])
   end
 
   def new
     @company = Company.find(params[:company_id])
     @shop = @company.shops.find(params[:shop_id])
-    @file = @shops.files.build
+    @file = @shops.uploaded_files.build
   end
 
   def create
     @company = Company.find(params[:company_id])
     @shop = @company.shops.find(params[:shop_id])
-    @file = @shops.files.build(file_params)
+    @file = @shops.uploaded_files.build(file_params)
     if @file.save
       flash[:success] = "Shop add!"
       redirect_to [@company, @shop, @file]
@@ -33,13 +33,13 @@ class FilesController < ApplicationController
   def edit
     @company = Company.find(params[:company_id])
     @shop = @company.shops.find(params[:shop_id])
-    @file = @shops.files.find(params[:id])
+    @file = @shops.uploaded_files.find(params[:id])
   end
 
   def update
     @company = Company.find(params[:company_id])
     @shop = @company.shops.find(params[:shop_id])
-    @file = @shops.files.find(params[:id])
+    @file = @shops.uploaded_files.find(params[:id])
     if @file.update_attributes(file_params)
       flash[:success] = "File data updated"
       redirect_to [@company, @shop, @file]
@@ -51,5 +51,5 @@ class FilesController < ApplicationController
 
   private
     def file_params
-      params.require(:file).permit()
+      params.require(:file).permit(:name, :url, :file_type)
 end
