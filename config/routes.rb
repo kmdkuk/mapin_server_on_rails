@@ -7,4 +7,11 @@ Rails.application.routes.draw do
       resources :uploaded_files
     end
   end
+
+  namespace :api do
+    resources :shops do
+      resources :files
+    end
+    resources :files
+  end
 end
