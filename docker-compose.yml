@@ -7,7 +7,7 @@ services:
       DATABASE_URL: mysql2://root:pass@mysql:3306
       MYSQL_ROOT_PASSWORD: 'pass'
     ports:
-      - '80:3000'
+      - '3000:3000'
     volumes:
       - .:/usr/src/mapin_server
       - ./vendor/bundle:/usr/src/bundle
