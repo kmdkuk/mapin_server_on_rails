@@ -1,5 +1,5 @@
 <tr>
-  <td><%= file.id %></td>
+  <td><%= link_to file.id, company_shop_file_path(@company, @shop, file) %></td>
   <td><%= file.name %></td>
   <td><%= file.file_type %></td>
   <td><%= link_to "edit", edit_company_shop_file_path(@company, @shop, file) %></td>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'data_formats#index'
+  root 'companies#index'
   get '/sample', to: 'sample#index'
 
   resources :companies do
