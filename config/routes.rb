@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :companies do
     resources :shops do
-      resources :uploaded_files
+      resources :files, controller: :uploaded_files
     end
   end
 
