@@ -17,7 +17,7 @@ class DataFormatsController < ApplicationController
           shop_latitude = 0.0
           shop_longitude = shop[:longitude]
           shop_latitude = shop[:latitude]
-          if ((shop_longitude - longitude).abs > 0.01 && (shop_latitude - latitude).abs > 0.01)
+          if ((shop_longitude - longitude).abs > 0.01 || (shop_latitude - latitude).abs > 0.01)
             next
           end
         end
