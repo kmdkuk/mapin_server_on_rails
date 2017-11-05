@@ -1,12 +1,18 @@
 class CompaniesController < ApplicationController
   def index
     @companies = Company.all
+    respond_to do |format|
+      format.html # => 通常のURLの場合、index.html.erb が返される
+      format.json { render json: @companies } # URLが.jsonの場合、@products.to_json が返される
+    end
   end
 
   def show
     @company = Company.find(params[:id])
-    # company/<company_id>/shop で表示するべきかも
-    # @shops = @company.shops
+    respond_to do |format|
+      format.html
+      format.json { render json: @company }
+    end
   end
 
   def create

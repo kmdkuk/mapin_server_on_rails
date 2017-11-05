@@ -2,11 +2,19 @@ class ShopsController < ApplicationController
   def index
     @company = Company.find(params[:company_id])
     @shops = @company.shops
+    respond_to do |format|
+      format.html
+      format.json { render json: @shops }
+    end
   end
 
   def show
     @company = Company.find(params[:company_id])
     @shop = @company.shops.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json { render json: @shop }
+    end
   end
 
   def new

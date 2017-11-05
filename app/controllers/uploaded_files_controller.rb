@@ -3,12 +3,20 @@ class UploadedFilesController < ApplicationController
     @company = Company.find(params[:company_id])
     @shop = @company.shops.find(params[:shop_id])
     @files = @shop.uploaded_files
+    respond_to do |format|
+      format.html
+      format.json { render json: @files}
+    end
   end
 
   def show
     @company = Company.find(params[:company_id])
     @shop = @company.shops.find(params[:shop_id])
     @file = @shop.uploaded_files.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json { render json: @file }
+    end
   end
 
   def new
