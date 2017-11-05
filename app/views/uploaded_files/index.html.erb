@@ -5,10 +5,8 @@
     <th>ファイルタイプ</th>
   </tr>
 
-  <tr>
-    <% @files.each do |file| %>
-      <%= render 'show_data', file: file %>
-    <% end %>
-  </tr>
+  <% @files.each do |file| %>
+    <%= render 'show_data', file: file %>
+  <% end %>
 
 </table>

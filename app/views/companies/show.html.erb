@@ -5,8 +5,5 @@
     <th>名前</th>
   </tr>
 
-  <tr>
-    <td><%= @company.id %></td>
-    <td><%= @company.name %></td>
-  </tr>
+  <%= render 'show_data', company: @company %>
 </table>

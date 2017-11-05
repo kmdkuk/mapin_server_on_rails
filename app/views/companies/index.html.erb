@@ -6,9 +6,6 @@
     <th>name</th>
   </tr>
   <% @companies.each do |company| %>
-    <tr>
-      <%= content_tag :td, company.id %>
-      <%= content_tag :td, company.name %>
-    </tr>
+    <%= render 'show_data', company: company %>
   <% end %>
 </table>
