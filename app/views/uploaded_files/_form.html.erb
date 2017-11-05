@@ -1,4 +1,4 @@
-<%= form_for([@company,@shop,@file]) do |f| %>
+<%= form_for([@company, @shop, @file], url: company_shop_file_path) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name, class: 'form-control' %>
 

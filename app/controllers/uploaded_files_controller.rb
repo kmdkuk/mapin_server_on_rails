@@ -31,7 +31,7 @@ class UploadedFilesController < ApplicationController
     @file = @shop.uploaded_files.build(file_params)
     if @file.save
       flash[:success] = "Shop add!"
-      redirect_to [@company, @shop, @file]
+      redirect_to company_shop_file_path(@company, @shop, @file)
     else
       flash[:danger] = "Company add fail..."
       render 'new'
@@ -50,7 +50,7 @@ class UploadedFilesController < ApplicationController
     @file = @shop.uploaded_files.find(params[:id])
     if @file.update_attributes(file_params)
       flash[:success] = "File data updated"
-      redirect_to [@company, @shop, @file]
+      redirect_to company_shop_file_path(@company, @shop, @file)
     else
       flash[:danger] = "Updated failed..."
       render 'edit'
