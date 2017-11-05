@@ -18,7 +18,7 @@ class Api::FilesController < ApplicationController
     elsif params[:shop_id]
       @files = UploadedFile.where shop_id: params[:shop_id]
     else
-      # @files = UploadedFile.all
+      @files = UploadedFile.all
     end
     render json: @files
   end
