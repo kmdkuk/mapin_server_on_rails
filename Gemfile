@@ -39,7 +39,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # 緯度経度マップ利用のためのもの
-gem 'gmaps4rails'
+# gem 'gmaps4rails'
 gem 'geocoder'
 
 gem 'dotenv-rails'
