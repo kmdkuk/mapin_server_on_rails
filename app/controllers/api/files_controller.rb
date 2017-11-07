@@ -3,20 +3,11 @@ class Api::FilesController < ApplicationController
     if params[:longitude].present? && params[:latitude].present? && !params[:shop_id]
       longitude = params[:longitude].to_f
       latitude = params[:latitude].to_f
-      shops = Shop.all
-      shop_id_list = []
-      shops.each do |shop|
-        shop_longitude, shop_latitude = 0.0, 0.0
-        shop_longitude = shop[:longitude].to_f
-        shop_latitude = shop[:latitude].to_f
-        if ((shop_longitude - longitude).abs > 0.01 || (shop_latitude - latitude).abs > 0.01)
-          next
-        end
-        shop_id_list.push(shop[:id])
-      end
-      @files = UploadedFile.where shop_id: shop_id_list
+      shops = Shop.select(:id).where(longitude: (longitude-0.01)..(longitude+0.01), latitude: (latitude-0.01)..(latitude+0.01))
+      @files = UploadedFile.where(shop_id: shops)
     elsif params[:shop_id]
-      @files = UploadedFile.where shop_id: params[:shop_id]
+      shops = Shop.find(params[:shop_id])
+      @files = shops.uploaded_files
     else
       @files = UploadedFile.all
     end

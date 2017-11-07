@@ -1,7 +1,13 @@
 class ShopsController < ApplicationController
   def index
     @company = Company.find(params[:company_id])
-    @shops = @company.shops
+    if(params[:longitude].present? && params[:latitude].present?)
+      long = params[:longitude].to_f
+      lat = params[:latitude].to_f
+      @shops = @company.shops.where(longitude: (long-0.01)..(long+0.01), latitude: (lat-0.01)..(lat+0.01))
+    else
+      @shops = @company.shops
+    end
     respond_to do |format|
       format.html
       format.json { render json: @shops }
