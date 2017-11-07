@@ -3,10 +3,12 @@
 
 <h1>会社一覧</h1>
 
-<table class="list">
+<table class="table">
   <tr>
     <th>id</th>
     <th>name</th>
+    <th></th>
+    <th></th>
   </tr>
   <% @companies.each do |company| %>
     <%= render 'show_data', company: company %>
