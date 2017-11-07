@@ -12,6 +12,23 @@ company = Company.create(
   name: "7&iホールディングス",
   )
 
+company2 = Company.create(
+  name: "函館の大学"
+)
+
+miraidai = company2.shops.create(
+  name: "公立はこだて未来大学",
+  image_url: "https://www.fun.ac.jp/control-panel/wp-content/uploads/2014/03/copy-top4.jpg",
+  postal_code: "041-8655",
+  address: "北海道函館市亀田中野町116番地2",
+  tel: "0138-00-0000",
+  business_hours: "10:00~17:00",
+  category_id: college.id,
+  homepage: "https://www.fun.ac.jp/"
+)
+
+sleep(5)
+
 shop = company.shops.create(
   name: "イトーヨーカドー大井町店",
   image_url: "https://i.imgur.com/ihcWOPZ.png",
@@ -20,10 +37,10 @@ shop = company.shops.create(
   tel: "03-3777-6611",
   business_hours: "10:00~22:00",
   category_id: market.id,
-  homepage: "http://www.itoyokado.co.jp/",
-  longitude: 35.6072075,
-  latitude: 139.7339655
+  homepage: "http://www.itoyokado.co.jp/"
 )
+
+sleep(5)
 
 shop2 = company.shops.create(
   name: "セブンイレブン大井町店",
@@ -33,122 +50,165 @@ shop2 = company.shops.create(
   tel: "03-3777-6611",
   business_hours: "２４時間営業",
   category_id: market.id,
-  homepage: "http://www.sej.co.jp/",
-  longitude: 35.6072075,
-  latitude: 139.7339655
+  homepage: "http://www.sej.co.jp/"
 )
 
-shop.uploaded_files.create(
+files = Array.new
+
+files.push(
+  {
   name: "ダミー.pdf",
   url: "https://drive.google.com/file/d/0B5PMr_DG7mrec2dSOVV6clZtdGM/view?usp=sharing",
-  file_type: "pdf",
+  file_type: "pdf"
+  }
 )
 
-shop.uploaded_files.create(
+files.push(
+  {
   name: "得の一チラシ.jpg",
   url: "https://drive.google.com/uc?export=download&id=0B5PMr_DG7mreV0JNT3VyS0NUcWM",
-  file_type: "jpg",
+  file_type: "jpg"
+  }
 )
 
-shop.uploaded_files.create(
+files.push(
+  {
   name: "AP3.ppt",
   url: "https://drive.google.com/uc?export=download&id=0B_TYMLnAFlZTT0R6OGhjSVU5bjA",
-  file_type: "ppt",
+  file_type: "ppt"
+  }
 )
 
-shop.uploaded_files.create(
+files.push(
+  {
   name: "bmp-sample.bmp",
   url: "https://drive.google.com/uc?export=download&id=0B_TYMLnAFlZTS3dhc3RzUDJRZnM",
-  file_type: "bmp",
+  file_type: "bmp"
+  }
 )
 
-shop.uploaded_files.create(
+files.push(
+  {
   name: "学習フィードバック.doc",
   url: "https://drive.google.com/uc?export=download&id=0B_TYMLnAFlZTb2Q4ZVA2dmkyclk",
-  file_type: "doc",
+  file_type: "doc"
+  }
 )
 
-shop.uploaded_files.create(
+files.push(
+  {
   name: "text-sample.txt",
   url: "https://drive.google.com/uc?export=download&id=0B_TYMLnAFlZTaXpfRHBxb19DZ1U",
-  file_type: "text",
+  file_type: "text"
+  }
 )
 
-shop.uploaded_files.create(
+files.push(
+  {
   name: "まっぴんプロダクトバックログ.xls",
   url: "https://drive.google.com/uc?export=download&id=0B_TYMLnAFlZTTzNUQVB4M1MwSGM",
-  file_type: "xls",
+  file_type: "xls"
+  }
 )
 
-shop.uploaded_files.create(
+files.push(
+  {
   name: "test.c",
   url: "https://drive.google.com/uc?export=download&id=0B5PMr_DG7mreV0JNT3VyS0NUcWM",
-  file_type: "c",
+  file_type: "c"
+  }
 )
 
-shop.uploaded_files.create(
+files.push(
+  {
   name: "sample.mp4",
   url: "https://drive.google.com/file/d/0B5PMr_DG7mrec2dSOVV6clZtdGM/view?usp=sharing",
-  file_type: "mp4",
+  file_type: "mp4"
+  }
 )
 
-shop.uploaded_files.create(
+files.push(
+  {
   name: "README.md",
   url: "https://drive.google.com/uc?export=download&id=0B5PMr_DG7mreV0JNT3VyS0NUcWM",
-  file_type: "md",
+  file_type: "md"
+  }
 )
 
-# shop2
-shop2.uploaded_files.create(
+files.push(
+  {
   name: "png-sample.png",
   url: "https://drive.google.com/uc?export=download&id=0B_TYMLnAFlZTQnM4OUN0RkIwUGs",
-  file_type: "png",
+  file_type: "png"
+  }
 )
 
-shop2.uploaded_files.create(
+files.push(
+  {
   name: "おでん広告.jpg",
   url: "https://drive.google.com/uc?export=download&id=0B5PMr_DG7mreN240ZnVHYXpZdnM",
-  file_type: "jpg",
+  file_type: "jpg"
+  }
 )
 
-shop2.uploaded_files.create(
+files.push(
+  {
   name: "gif-sample.gif",
   url: "https://drive.google.com/uc?export=download&id=0B_TYMLnAFlZTQXlxdGozdjhOaFU",
-  file_type: "gif",
+  file_type: "gif"
+  }
 )
 
-shop2.uploaded_files.create(
+files.push(
+  {
   name: "AL-アイディア提案シート-テンプレ.xlsx",
   url: "https://drive.google.com/uc?export=download&id=0B_TYMLnAFlZTRWtwYzgzVWNYdzg",
-  file_type: "xlsx",
+  file_type: "xlsx"
+  }
 )
 
-shop2.uploaded_files.create(
+files.push(
+  {
   name: "AP1.pptx",
   url: "https://drive.google.com/uc?export=download&id=0B_TYMLnAFlZTaGR1bkRUNzRvUmc",
-  file_type: "pptx",
+  file_type: "pptx"
+  }
 )
 
-shop2.uploaded_files.create(
+files.push(
+  {
   name: "MI-議事録-00-松山-0525-テンプレ案-ver2.1.docx",
   url: "https://drive.google.com/uc?export=download&id=0B_TYMLnAFlZTVGZEYjU1WWFRMjg",
-  file_type: "docx",
+  file_type: "docx"
+  }
 )
 
-shop2.uploaded_files.create(
+files.push(
+  {
   name: "1-画像検索.pages",
   url: "https://drive.google.com/uc?export=download&id=0B_TYMLnAFlZTV19zNGtzbmE1TlE",
-  file_type: "pages",
+  file_type: "pages"
+  }
 )
 
-shop2.uploaded_files.create(
+files.push(
+  {
   name: "スイーツカテゴリ数.numbers",
   url: "https://drive.google.com/uc?export=download&id=0B_TYMLnAFlZTYXhTeWxTeHNfRG8",
-  file_type: "numbers",
+  file_type: "numbers"
+  }
 )
 
-shop2.uploaded_files.create(
+files.push(
+  {
   name: "mapin.key",
   url: "https://drive.google.com/uc?export=download&id=0B_TYMLnAFlZTSXNGT1hVbUVTXzQ",
-  file_type: "key",
+  file_type: "key"
+  }
 )
+
+files.each do |file|
+  miraidai.uploaded_files.create(file)
+  shop.uploaded_files.create(file)
+  shop2.uploaded_files.create(file)
+end
