@@ -4,5 +4,5 @@ class Shop < ApplicationRecord
   belongs_to :category
 
   geocoded_by :address
-  before_validation :geocode
+  before_save :geocode
 end
