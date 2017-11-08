@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :categories
+
   namespace :api do
     resources :shops do
       resources :files
