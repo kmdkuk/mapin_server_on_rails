@@ -1,2 +1,17 @@
-<h1>Categories#index</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
+<h1>新しいカテゴリーを作る</h1>
+<%= link_to 'new', new_category_path %><br><br>
+
+カテゴリー一覧
+<table class="table">
+  <tr>
+    <th>id</th>
+    <th>名前</th>
+    <th></th>
+  </tr>
+
+  <%= unless @categories.nil? %>
+    <% @categories.each do |category| %>
+      <%= render 'show_data', category: category %>
+    <% end %>
+  <% end %>
+</table>
