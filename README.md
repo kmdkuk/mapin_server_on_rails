@@ -1,6 +1,6 @@
-(/?longitude=xxx&latitude=xxx)がついているものは緯度経度で検索した結果を返す。
-つけなかった場合はすべてのデータを無条件で返します。
-
+(/?longitude=xxx&latitude=xxx)がついているものは緯度経度で検索した結果を返す。  
+つけなかった場合はすべてのデータを無条件で返します。  
+  
 /api/shops(/?longitude=xxx&latitude=xxx)  
 shopsの一覧をjsonで  
   
