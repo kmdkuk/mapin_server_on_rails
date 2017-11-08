@@ -35,7 +35,7 @@ class ShopsController < ApplicationController
       flash[:success] = "Shop add!"
       redirect_to [@company, @shop]
     else
-      flash[:danger] = "Company add fail..."
+      flash[:danger] = "shop add fail..."
       render 'new'
     end
   end
@@ -60,7 +60,6 @@ class ShopsController < ApplicationController
   private
     def shop_params
       params.require(:shop).permit(:name, :image_url, :postal_code,
-                                   :address, :tel, :hours_begin, :hours_end,
-                                   :longitude, :latitude)
+                                   :address, :tel, :business_hours, :homepage)
     end
 end
