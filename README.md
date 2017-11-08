@@ -1,4 +1,7 @@
-/api/shops  
+(/?longitude=xxx&latitude=xxx)がついているものは緯度経度で検索した結果を返す。
+つけなかった場合はすべてのデータを無条件で返します。
+
+/api/shops(/?longitude=xxx&latitude=xxx)  
 shopsの一覧をjsonで  
   
 /api/shops/<:id>  
@@ -7,7 +10,10 @@ id番目のshopを表示をjson
 /api/shops/<:id>/files  
 id番目のshopの持ってるfileの一覧をjson  
   
-/companies(.js)  
+/api/files(/?longitude=xxx&latitude=xxx)
+ファイルの一覧をjsonで返す  
+
+/companies(.js)  
 登録している会社の一覧(json化する)  
   
 /companies/new  
