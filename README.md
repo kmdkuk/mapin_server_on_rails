@@ -1,24 +1,36 @@
-# README
+/api/shops
+shopsの一覧をjsonで
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+/api/shops/<:id>
+id番目のshopを表示をjson
 
-Things you may want to cover:
+/api/shops/<:id>/files
+id番目のshopの持ってるfileの一覧をjson
 
-* Ruby version
+/companies(.js)
+登録している会社の一覧(json化する)
 
-* System dependencies
+/companies/new
+新しい会社を登録するフォームを表示
 
-* Configuration
+/companies/<:company_id>(.json)
+company_id番の会社を表示(json化する)
 
-* Database creation
+/companies/<:company_id>/shops(.json)
+指定会社が所持しているshopの一覧(jsonも)
 
-* Database initialization
+/companies/<:company_id>/shops/new
+指定会社が所持するshopの登録フォームを表示
 
-* How to run the test suite
+/companies/<:company_id>/shops/<:shop_id>(.json)
+会社の持っているショップを表示(json)
 
-* Services (job queues, cache servers, search engines, etc.)
+/companies/<:company_id>/shops/<:shop_id>/files(.json)
+会社の持っているショップの持っているfileの一覧(json)
 
-* Deployment instructions
+/companies/<:company_id>/shops/<:shop_id>/files/new
+察しのとおりだと思います。
 
-* ...
+/companies/<:company_id>/shops/<:shop_id>/files/<:file_id>(.json)
+察しのとおりです。
+
