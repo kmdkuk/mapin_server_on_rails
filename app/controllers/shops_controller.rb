@@ -25,6 +25,7 @@ class ShopsController < ApplicationController
 
   def new
     @company = Company.find(params[:company_id])
+    @categories = Category.all
     @shop = @company.shops.build
   end
 
@@ -43,6 +44,7 @@ class ShopsController < ApplicationController
   def edit
     @company = Company.find(params[:company_id])
     @shop = @company.shops.find(params[:id])
+    @categories = Category.all
   end
 
   def update
