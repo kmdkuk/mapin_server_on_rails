@@ -1,4 +1,4 @@
-<h1>新しいカテゴリーを作る</h1>
+新しいカテゴリーを作る<br>
 <%= link_to 'new', new_category_path %><br><br>
 
 カテゴリー一覧
@@ -9,7 +9,7 @@
     <th></th>
   </tr>
 
-  <%= unless @categories.nil? %>
+  <% unless @categories.nil? %>
     <% @categories.each do |category| %>
       <%= render 'show_data', category: category %>
     <% end %>
