@@ -1,5 +1,9 @@
+POSTを意識する必要は無いはずなので
+基本全てGETです。
+
 (/?longitude=xxx&latitude=xxx)がついているものは緯度経度で検索した結果を返す。  
 つけなかった場合はすべてのデータを無条件で返します。  
+
   
 /api/shops(/?longitude=xxx&latitude=xxx)  
 shopsの一覧をjsonで  
@@ -13,7 +17,7 @@ id番目のshopの持ってるfileの一覧をjson
 /api/files(/?longitude=xxx&latitude=xxx)
 ファイルの一覧をjsonで返す  
 
-/companies(.js)  
+/companies(.json)  
 登録している会社の一覧(json化する)  
   
 /companies/new  
