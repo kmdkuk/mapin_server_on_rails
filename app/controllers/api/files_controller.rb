@@ -11,6 +11,11 @@ class Api::FilesController < ApplicationController
     else
       @files = UploadedFile.all
     end
+    @files.each do |file|
+      if file.file? && file.url.nil?
+        file.url = file.file.url
+      end
+    end
     render json: @files
   end
 

@@ -9,4 +9,5 @@ class UploadedFile < ApplicationRecord
       self.url
     end
   end
+
 end

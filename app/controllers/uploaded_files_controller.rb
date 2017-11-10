@@ -3,9 +3,14 @@ class UploadedFilesController < ApplicationController
     @company = Company.find(params[:company_id])
     @shop = @company.shops.find(params[:shop_id])
     @files = @shop.uploaded_files
+    @files.each do |file|
+      if file.file? && file.url.nil?
+        file.url = file.file.url
+      end
+    end
     respond_to do |format|
       format.html
-      format.json { render json: @files}
+      format.json { render json: @files }
     end
   end
 
@@ -13,6 +18,9 @@ class UploadedFilesController < ApplicationController
     @company = Company.find(params[:company_id])
     @shop = @company.shops.find(params[:shop_id])
     @file = @shop.uploaded_files.find(params[:id])
+    if @file.file? && @file.url.nil?
+      @file.url = @file.file.url
+    end
     respond_to do |format|
       format.html
       format.json { render json: @file }
