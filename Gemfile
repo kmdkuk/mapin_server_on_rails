@@ -42,6 +42,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'gmaps4rails'
 gem 'geocoder'
 
+# ファイルアップロード関係
+gem 'carrierwave'
+gem 'fog-aws'
+
 gem 'dotenv-rails'
 
 
