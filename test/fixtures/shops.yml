@@ -6,8 +6,7 @@ one:
   postal_code: MyString
   address: MyString
   tel: MyString
-  hours_begin: MyString
-  hours_end: MyString
+  business_hours: MyString
   category_id: 1
   homepage: MyString
   company_id: 1
@@ -18,8 +17,7 @@ two:
   postal_code: MyString
   address: MyString
   tel: MyString
-  hours_begin: MyString
-  hours_end: MyString
+  business_hours: MyString
   category_id: 1
   homepage: MyString
   company_id: 1

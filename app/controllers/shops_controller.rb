@@ -62,6 +62,6 @@ class ShopsController < ApplicationController
   private
     def shop_params
       params.require(:shop).permit(:name, :image_url, :postal_code,
-                                   :address, :tel, :business_hours, :homepage)
+                                   :address, :tel, :business_hours, :homepage, :category_id)
     end
 end
