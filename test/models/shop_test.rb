@@ -37,4 +37,12 @@ class ShopTest < ActiveSupport::TestCase
     @shop.tel = ""
     assert_not @shop.valid?
   end
+  
+  test "associated uploaded_files should be destroy" do
+    @shop.save
+    @shop.uploaded_files.create!(name: "testfile", url: "http://testfile", file_type: "pdf")
+    assert_difference 'UploadedFile.count', -1 do
+      @shop.destroy
+    end
+  end
 end
