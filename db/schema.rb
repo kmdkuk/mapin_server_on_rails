@@ -12,19 +12,19 @@
 
 ActiveRecord::Schema.define(version: 20171110024023) do
 
-  create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "categories", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "companies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "companies", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "shops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "shops", force: :cascade do |t|
     t.string   "name"
     t.string   "image_url"
     t.string   "postal_code"
@@ -34,13 +34,13 @@ ActiveRecord::Schema.define(version: 20171110024023) do
     t.integer  "category_id"
     t.string   "homepage"
     t.integer  "company_id"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.float    "longitude",      limit: 53
-    t.float    "latitude",       limit: 53
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.float    "longitude"
+    t.float    "latitude"
   end
 
-  create_table "uploaded_files", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "uploaded_files", force: :cascade do |t|
     t.string   "name"
     t.string   "url"
     t.string   "file_type"
