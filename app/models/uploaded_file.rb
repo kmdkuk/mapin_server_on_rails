@@ -4,12 +4,4 @@ class UploadedFile < ApplicationRecord
   
   validates :name, presence: true
   validates :file_type, presence: true
-
-  def getURL
-    if self.file?
-      self.file.url
-    else
-      self.url
-    end
-  end
 end
