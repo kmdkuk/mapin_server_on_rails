@@ -1,10 +1,7 @@
 <%= form_for([@company, @shop, @file], url: company_shop_files_path(@company,@shop)) do |f| %>
     <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control' %>
-
-    <%= f.label :file_type %>
-    <%= f.text_field :file_type, class: 'form-control' %>
-
+    <%= f.text_field :name, placeholder: "デフォルトでファイル名になります。", class: 'form-control' %>
+    
     <%= f.label :file %>
     <%= f.file_field :file, class: 'form-control' %>
 
