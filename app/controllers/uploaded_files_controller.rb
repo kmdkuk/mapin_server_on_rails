@@ -33,10 +33,10 @@ class UploadedFilesController < ApplicationController
     @shop = @company.shops.find(params[:shop_id])
     params[:uploaded_file][:file_type] = File.extname(params[:uploaded_file][:file].original_filename)
     params[:uploaded_file][:name] = params[:uploaded_file][:file].original_filename if params[:uploaded_file][:name].empty?
-    params[:uploaded_file][:name].slice!(params[:uploaded_file][:file_type])
     params[:uploaded_file][:file_type].slice!(0)
     
     @file = @shop.uploaded_files.build(file_params)
+    @file.name.slice!(".#{@file.file_type}")
     if @file.save
       flash[:success] = "Shop add!"
       if @file.file? && @file.url.nil?
