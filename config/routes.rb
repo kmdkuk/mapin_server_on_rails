@@ -8,14 +8,16 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :files, controller: :uploaded_files do
+    get '/download', to: 'uploaded_files#download'
+  end
+
   resources :categories
 
   namespace :api do
     resources :shops do
       resources :files
     end
-    resources :files do
-      get '/download', to: 'uploaded_files#download'
-    end
+    resources :files
   end
 end
