@@ -4,9 +4,7 @@ Rails.application.routes.draw do
   get '/sample', to: 'data_formats#index'
   resources :companies do
     resources :shops do
-      resources :files, controller: :uploaded_files do
-        get '/download', to: 'uploaded_files#download'
-      end
+      resources :files, controller: :uploaded_files
     end
   end
 
@@ -16,6 +14,8 @@ Rails.application.routes.draw do
     resources :shops do
       resources :files
     end
-    resources :files
+    resources :files do
+      get '/download', to: 'uploaded_files#download'
+    end
   end
 end
