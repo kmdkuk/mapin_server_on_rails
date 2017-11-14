@@ -4,8 +4,8 @@ class Shop < ApplicationRecord
   belongs_to :category
 
   geocoded_by :address
-  before_save :geocode
-  
+  after_validation :geocode, if: lambda {|obj| obj.address_changed?}
+
   validates :name, presence: true
   validates :image_url, presence: true
   validates :postal_code, presence: true
