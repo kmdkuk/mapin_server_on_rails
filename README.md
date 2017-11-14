@@ -32,16 +32,16 @@ company_id番の会社を表示(json化する)
 /companies/<:company_id>/shops/new  
 指定会社が所持するshopの登録フォームを表示  
   
-/companies/<:company_id>/shops/<:shop_id>(.json)  
-会社の持っているショップを表示(json)  
+shops/<:shop_id>(.json)  
+ショップを表示(json)  
   
-/companies/<:company_id>/shops/<:shop_id>/files(.json)  
-会社の持っているショップの持っているfileの一覧(json)  
+shops/<:shop_id>/files(.json)  
+ショップの持っているfileの一覧(json)  
   
-/companies/<:company_id>/shops/<:shop_id>/files/new  
+shops/<:shop_id>/files/new  
 察しのとおりだと思います。  
   
-/companies/<:company_id>/shops/<:shop_id>/files/<:file_id>(.json)  
+files/<:file_id>(.json)  
 察しのとおりです。  
   
   
