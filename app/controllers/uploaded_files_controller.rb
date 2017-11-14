@@ -34,7 +34,7 @@ class UploadedFilesController < ApplicationController
 
     @file = @shop.uploaded_files.build(file_params)
     @file.name.slice!(".#{@file.file_type}")
-    if @file.save
+    if @file.save!
       flash[:success] = "File add!"
       if @file.file? && @file.url.nil?
         @file.update_attribute(:url, @file.file.url)
@@ -63,6 +63,13 @@ class UploadedFilesController < ApplicationController
       flash[:danger] = "Updated failed..."
       render 'edit'
     end
+  end
+
+  def download
+    file = UploadedFile.find(params[:file_id])
+    file_path = Rails.root.join(file.file.path)
+    stat = File::stat(file_path)
+    send_file(file_path, filename: file.file_fullname, length: stat.size)
   end
 
   private
