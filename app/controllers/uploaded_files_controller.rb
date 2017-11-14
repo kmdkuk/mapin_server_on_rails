@@ -68,9 +68,8 @@ class UploadedFilesController < ApplicationController
 
   def download
     file = UploadedFile.find(params[:file_id])
-    file_path = Rails.root.join(file.file.path)
-    stat = File::stat(file_path)
-    send_file(file_path, filename: file.file_fullname, length: stat.size)
+    data = open(file.file.url)
+    send_data data.read, filename: file.file_fullname, disposition: 'attachment', stream: 'true', buffer_size: '4096'
   end
 
   private
