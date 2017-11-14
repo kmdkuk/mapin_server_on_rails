@@ -44,7 +44,7 @@ gem 'geocoder'
 
 # ファイルアップロード関係
 gem 'carrierwave'
-gem 'fog-aws'
+gem 'fog'
 
 gem 'dotenv-rails'
 
