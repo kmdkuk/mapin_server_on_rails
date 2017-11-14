@@ -15,8 +15,7 @@ class ShopsController < ApplicationController
   end
 
   def show
-    @company = Company.find(params[:company_id])
-    @shop = @company.shops.find(params[:id])
+    @shop = Shop.find(params[:id])
     respond_to do |format|
       format.html
       format.json { render json: @shop }
@@ -42,14 +41,12 @@ class ShopsController < ApplicationController
   end
 
   def edit
-    @company = Company.find(params[:company_id])
-    @shop = @company.shops.find(params[:id])
+    @shop = Shop.find(params[:id])
     @categories = Category.all
   end
 
   def update
-    @company = Company.find(params[:company_id])
-    @shop = @company.shops.find(params[:id])
+    @shop = Shop.find(params[:id])
     if @shop.update_attributes(shop_params)
       flash[:success] = "Shop data updated"
       redirect_to [@company, @shop]

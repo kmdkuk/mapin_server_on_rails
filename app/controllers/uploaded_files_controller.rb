@@ -1,8 +1,11 @@
 class UploadedFilesController < ApplicationController
   def index
-    @company = Company.find(params[:company_id])
-    @shop = @company.shops.find(params[:shop_id])
-    @files = @shop.uploaded_files
+    if params[:shop_id]
+      @shop = Shop.find(params[:shop_id])
+      @files = @shop.uploaded_files
+    else
+      @files = UploadedFile.all
+    end
     respond_to do |format|
       format.html
       format.json { render json: @files }
@@ -10,9 +13,7 @@ class UploadedFilesController < ApplicationController
   end
 
   def show
-    @company = Company.find(params[:company_id])
-    @shop = @company.shops.find(params[:shop_id])
-    @file = @shop.uploaded_files.find(params[:id])
+    @file = UploadedFile.find(params[:id])
     respond_to do |format|
       format.html
       format.json { render json: @file }
@@ -20,14 +21,12 @@ class UploadedFilesController < ApplicationController
   end
 
   def new
-    @company = Company.find(params[:company_id])
-    @shop = @company.shops.find(params[:shop_id])
+    @shop = Shop.find(params[:shop_id])
     @file = @shop.uploaded_files.build
   end
 
   def create
-    @company = Company.find(params[:company_id])
-    @shop = @company.shops.find(params[:shop_id])
+    @shop = Shop.find(params[:shop_id])
     params[:uploaded_file][:file_type] = File.extname(params[:uploaded_file][:file].original_filename)
     params[:uploaded_file][:name] = params[:uploaded_file][:file].original_filename if params[:uploaded_file][:name].empty?
     params[:uploaded_file][:file_type].slice!(0)
@@ -47,15 +46,11 @@ class UploadedFilesController < ApplicationController
   end
 
   def edit
-    @company = Company.find(params[:company_id])
-    @shop = @company.shops.find(params[:shop_id])
-    @file = @shop.uploaded_files.find(params[:id])
+    @file = UploadedFile.find(params[:id])
   end
 
   def update
-    @company = Company.find(params[:company_id])
-    @shop = @company.shops.find(params[:shop_id])
-    @file = @shop.uploaded_files.find(params[:id])
+    @file = UploadedFile.find(params[:id])
     if @file.update_attributes(file_params)
       flash[:success] = "File data updated"
       redirect_to company_shop_file_path(@company, @shop, @file)
