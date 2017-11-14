@@ -2,5 +2,6 @@
   <td><%= link_to company.id, company_path(company) %></td>
   <td><%= company.name %></td>
   <td><%= link_to "edit", edit_company_path(company) %></td>
+  <td><%= link_to "delete", company, method: :delete, data: {confirm: "よろしいですか？"} %></td>
   <td><%= link_to "所持ショップ一覧", company_shops_path(company) %></td>
 </tr>

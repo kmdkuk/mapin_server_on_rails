@@ -36,9 +36,9 @@ class UploadedFilesController < ApplicationController
     if @file.save!
       flash[:success] = "File add!"
       if @file.file? && @file.url.nil?
-        @file.update_attribute(:url, @file.file.url)
+        @file.update_attribute(:url, file_download_url(@file))
       end
-      redirect_to company_shop_file_path(@company, @shop, @file)
+      redirect_to file_path(@file)
     else
       flash[:danger] = "File add fail..."
       render 'new'
@@ -53,11 +53,17 @@ class UploadedFilesController < ApplicationController
     @file = UploadedFile.find(params[:id])
     if @file.update_attributes(file_params)
       flash[:success] = "File data updated"
-      redirect_to company_shop_file_path(@company, @shop, @file)
+      redirect_to file_path(@file)
     else
       flash[:danger] = "Updated failed..."
       render 'edit'
     end
+  end
+
+  def destroy
+    UploadedFile.find(params[:id]).destroy
+    flash[:success] = "File deleted"
+    redirect_to root_url
   end
 
   def download

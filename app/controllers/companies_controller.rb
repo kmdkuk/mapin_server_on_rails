@@ -45,6 +45,12 @@ class CompaniesController < ApplicationController
     end
   end
 
+  def destroy
+    Company.find(params[:id]).destroy
+    flash[:success] = "Company deleted"
+    redirect_to companies_url
+  end
+
   private
     def company_params
       params.require(:company).permit(:name)
