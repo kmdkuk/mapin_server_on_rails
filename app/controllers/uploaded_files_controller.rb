@@ -3,9 +3,6 @@ class UploadedFilesController < ApplicationController
     @company = Company.find(params[:company_id])
     @shop = @company.shops.find(params[:shop_id])
     @files = @shop.uploaded_files
-    @files.each do |file|
-      
-    end
     respond_to do |format|
       format.html
       format.json { render json: @files }
@@ -34,17 +31,17 @@ class UploadedFilesController < ApplicationController
     params[:uploaded_file][:file_type] = File.extname(params[:uploaded_file][:file].original_filename)
     params[:uploaded_file][:name] = params[:uploaded_file][:file].original_filename if params[:uploaded_file][:name].empty?
     params[:uploaded_file][:file_type].slice!(0)
-    
+
     @file = @shop.uploaded_files.build(file_params)
     @file.name.slice!(".#{@file.file_type}")
     if @file.save
-      flash[:success] = "Shop add!"
+      flash[:success] = "File add!"
       if @file.file? && @file.url.nil?
         @file.update_attribute(:url, @file.file.url)
       end
       redirect_to company_shop_file_path(@company, @shop, @file)
     else
-      flash[:danger] = "Company add fail..."
+      flash[:danger] = "File add fail..."
       render 'new'
     end
   end
