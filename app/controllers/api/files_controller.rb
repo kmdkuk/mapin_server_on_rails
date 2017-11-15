@@ -3,18 +3,13 @@ class Api::FilesController < ApplicationController
     if params[:longitude].present? && params[:latitude].present? && !params[:shop_id]
       longitude = params[:longitude].to_f
       latitude = params[:latitude].to_f
-      shops = Shop.select(:id).where(longitude: (longitude-0.01)..(longitude+0.01), latitude: (latitude-0.01)..(latitude+0.01))
+      shops = Shop.select(:id).within(1,[latitude, longitude])
       @files = UploadedFile.where(shop_id: shops)
     elsif params[:shop_id]
       shops = Shop.find(params[:shop_id])
       @files = shops.uploaded_files
     else
       @files = UploadedFile.all
-    end
-    @files.each do |file|
-      if file.file? && file.url.nil?
-        file.url = file.file.url
-      end
     end
     render json: @files
   end

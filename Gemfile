@@ -41,6 +41,7 @@ gem 'jbuilder', '~> 2.5'
 # 緯度経度マップ利用のためのもの
 # gem 'gmaps4rails'
 gem 'geocoder'
+gem 'geokit-rails'
 
 # ファイルアップロード関係
 gem 'carrierwave'

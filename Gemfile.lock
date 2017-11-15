@@ -226,6 +226,10 @@ GEM
       nokogiri (>= 1.5.11, < 2.0.0)
     formatador (0.2.5)
     geocoder (1.4.4)
+    geokit (1.11.0)
+    geokit-rails (2.3.0)
+      geokit (~> 1.5)
+      rails (>= 3.0)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     http-cookie (1.0.3)
@@ -367,6 +371,7 @@ DEPENDENCIES
   dotenv-rails
   fog
   geocoder
+  geokit-rails
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
