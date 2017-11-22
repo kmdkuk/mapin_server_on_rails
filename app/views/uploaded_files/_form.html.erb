@@ -1,4 +1,4 @@
-<%= form_for(form_path) do |f| %>
+<%= form_for(form_path, url: url) do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name, placeholder: "デフォルトでファイル名になります。", class: 'form-control' %>
 
