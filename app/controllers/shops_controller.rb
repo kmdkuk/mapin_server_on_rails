@@ -33,7 +33,7 @@ class ShopsController < ApplicationController
     @shop = @company.shops.build(shop_params)
     if @shop.save
       flash[:success] = "Shop add!"
-      redirect_to @shop
+      redirect_to company_shops_url(@shop.company)
     else
       flash[:danger] = "shop add fail..."
       render 'new'
@@ -49,7 +49,7 @@ class ShopsController < ApplicationController
     @shop = Shop.find(params[:id])
     if @shop.update_attributes(shop_params)
       flash[:success] = "Shop data updated"
-      redirect_to @shop
+      redirect_to company_shops_url(@shop.company)
     else
       flash[:danger] = "Update failed..."
       render 'edit'
@@ -59,7 +59,7 @@ class ShopsController < ApplicationController
   def destroy
     Shop.find(params[:id]).destroy
     flash[:success] = "Shop deleted"
-    redirectr_to root_url
+    redirect_to root_url
   end
 
   private

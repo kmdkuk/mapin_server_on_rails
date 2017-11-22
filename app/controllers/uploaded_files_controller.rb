@@ -38,7 +38,7 @@ class UploadedFilesController < ApplicationController
       if @file.file? && @file.url.nil?
         @file.update_attribute(:url, file_download_url(@file))
       end
-      redirect_to file_path(@file)
+      redirect_to shop_files_url(@file.shop)
     else
       flash[:danger] = "File add fail..."
       render 'new'
@@ -53,7 +53,7 @@ class UploadedFilesController < ApplicationController
     @file = UploadedFile.find(params[:id])
     if @file.update_attributes(file_params)
       flash[:success] = "File data updated"
-      redirect_to file_path(@file)
+      redirect_to shop_files_url(@file.shop)
     else
       flash[:danger] = "Updated failed..."
       render 'edit'
