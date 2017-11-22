@@ -1,9 +1,1 @@
-<%= form_for([@shop, @file], url: shop_files_path(@shop)) do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name, placeholder: "デフォルトでファイル名になります。", class: 'form-control' %>
-    
-    <%= f.label :file %>
-    <%= f.file_field :file, class: 'form-control' %>
-
-    <%= f.submit "submit", class: "btn btn-primary" %>
-<% end %>
+<%= render 'form', form_path: [@file.shop, @file] %>
